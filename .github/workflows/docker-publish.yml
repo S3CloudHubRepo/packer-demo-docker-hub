@@ -49,5 +49,5 @@ jobs:
 
     - name: Push Docker Image to AWS ECR
       run: |
-        docker push <aws_account_id>.dkr.ecr.$AWS_REGION.amazonaws.com/rushiks3cloudhub/my-docker-image:latest
-        docker push <aws_account_id>.dkr.ecr.$AWS_REGION.amazonaws.com/rushiks3cloudhub/my-docker-image:v1.0.0
+        docker push <6546-5415-8468>.dkr.ecr.$AWS_REGION.amazonaws.com/rushiks3cloudhub/my-docker-image:latest
+        docker push <6546-5415-8468>.dkr.ecr.$AWS_REGION.amazonaws.com/rushiks3cloudhub/my-docker-image:v1.0.0
