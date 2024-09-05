@@ -39,7 +39,7 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |   
-        docker push ${{ secrets.REGISTRY_NAME }}/rushiks3cloudhub/my-docker-image:latest
+        docker push ${{ secrets.REGISTRY_NAME }}.azurecr.io/rushiks3cloudhub/my-docker-image:latest
 
     - name: Logout from Azure
       run: docker logout ${{ secrets.REGISTRY_NAME }}
