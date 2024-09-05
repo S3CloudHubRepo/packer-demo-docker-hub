@@ -29,7 +29,7 @@ build {
   }
 
   post-processor "docker-tag" {
-    repository = "demos3cloudhub/rushiks3cloudhub/my-docker-image"
+    repository = "rushiks3cloudhub/my-docker-image"
     tag        = ["latest", "v1.0.0"]
   }
 }
