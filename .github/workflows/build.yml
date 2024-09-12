@@ -38,7 +38,7 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |   
-        docker push s3cloudhub/my-app:latest
+        docker push s3cloudhub/my-app-github:latest
 
     - name: Logout from Azure
       run: docker logout 
