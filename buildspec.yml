@@ -33,5 +33,5 @@ phases:
 
 env:
   secrets-manager:
-    DOCKER_USERNAME: <path-to-docker-username-secret>
-    DOCKER_PASSWORD: <path-to-docker-password-secret>
+    DOCKER_USERNAME: example/demo:DOCKER_USERNAME
+    DOCKER_PASSWORD: example/demo:DOCKER_PASSWORD
