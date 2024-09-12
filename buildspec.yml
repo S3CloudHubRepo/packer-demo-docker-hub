@@ -3,17 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      # Install dependencies, Docker, and Packer
-     version: 0.2
-
-phases:
-  install:
-    commands:
       # Use yum instead of apt-get for Amazon Linux
       - yum update -y
       - yum install -y docker
       - yum install -y packer
-
 
   pre_build:
     commands:
@@ -27,7 +20,7 @@ phases:
       # Validate and build the Docker image using Packer
       - packer validate packer.pkr.hcl
       - packer build packer.pkr.hcl
-      # Push Docker image to Docker Hub
+      # Build and push Docker image to Docker Hub
       - docker build -t s3cloudhub/my-app:latest .
       - docker push s3cloudhub/my-app:latest
 
@@ -38,5 +31,5 @@ phases:
 
 env:
   secrets-manager:
-    DOCKER_USERNAME: example/demo:DOCKER_USERNAME
-    DOCKER_PASSWORD: example/demo:DOCKER_PASSWORD
+    DOCKER_USERNAME: "example/demo:DOCKER_USERNAME"
+    DOCKER_PASSWORD: "example/demo:DOCKER_PASSWORD"
