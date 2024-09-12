@@ -4,11 +4,16 @@ phases:
   install:
     commands:
       # Install dependencies, Docker, and Packer
-      - apt-get update -y
-      - apt-get install -y docker.io
-      - curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
-      - apt-add-repository "deb https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-      - apt-get update && apt-get install -y packer
+     version: 0.2
+
+phases:
+  install:
+    commands:
+      # Use yum instead of apt-get for Amazon Linux
+      - yum update -y
+      - yum install -y docker
+      - yum install -y packer
+
 
   pre_build:
     commands:
